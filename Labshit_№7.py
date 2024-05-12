@@ -1,4 +1,10 @@
+from time import *
+
+
 def encode_LZ77(FileIn, FileOut):
+    #   Note of time
+    start_time = time()
+
     #   Connecting files for extraction and saving
     input_file = open(FileIn, 'r', encoding='utf-8').read()
     encoded_file = open(FileOut, 'w', encoding='utf-8')
@@ -47,9 +53,14 @@ def encode_LZ77(FileIn, FileOut):
     
     encoded_file.close()
 
+    #   Time ca;culation
+    end_time = time()
+    elapsed_time = end_time - start_time
+
     #   Printing the output
     for code in output:
         print(code)
+    print(f'Original file size: {len(input_file)}\nEncoded file size: {len(output)}\nTime spent: {round(elapsed_time, 9)} sec')
 
 def decode_LZ77(FileIn, FileOut):
 
@@ -83,6 +94,9 @@ def decode_LZ77(FileIn, FileOut):
 #   ----------------------------------------------------------------------------
 
 def encode_LZ78(FileIn, FileOut):
+    #   Note of time
+    start_time = time()
+
     #   Connecting files for extraction and saving
     input_file = open(FileIn, 'r', encoding='utf-8')
     encoded_file = open(FileOut, 'w', encoding='utf-8')
@@ -116,10 +130,15 @@ def encode_LZ78(FileIn, FileOut):
     
     input_file.close()
     encoded_file.close()
+
+    #   Time ca;culation
+    end_time = time()
+    elapsed_time = end_time - start_time
     
     #   Printing the output
     for codes in output:
         print(codes)
+    print(f'Original file size: {len(text_from_file)}\nEncoded file size: {len(output)}\nTime spent: {round(elapsed_time, 9)} sec')
 
 def decode_LZ78(FileIn, FileOut):
     coded_file = open(FileIn, 'r', encoding='utf-8')
@@ -144,6 +163,9 @@ def decode_LZ78(FileIn, FileOut):
 #   ----------------------------------------------------------------------------
 
 def encode_LZW(FileIn, FileOut):
+    #   Note of time
+    start_time = time()
+
     #   Connecting files for extraction and saving
     input_file = open(FileIn, 'r', encoding='utf-8').read()
     encoded_file = open(FileOut, 'w', encoding='utf-8')
@@ -186,9 +208,14 @@ def encode_LZW(FileIn, FileOut):
 
     encoded_file.close()
 
+    #   Time ca;culation
+    end_time = time()
+    elapsed_time = end_time - start_time
+
     #   Printing the output
     for codes in output:
         print(codes)
+    print(f'Original file size: {len(input_file)}\nEncoded file size: {len(output)}\nTime spent: {round(elapsed_time, 9)} sec')
 
 
 def decode_LZW(FileIn, FileOut):
