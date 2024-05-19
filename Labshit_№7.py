@@ -251,7 +251,7 @@ def decode_LZW(FileIn, FileOut):
 #   ----------------------------------------------------------------------------
 
 def main():
-  choice = int(input("Select how the ,essage is encoded in the file\n1 - LZ77\n2 - LZ78\n3 - LZW\nSelected: "))
+  choice = int(input("Select how the, message is encoded in the file\n1 - LZ77\n2 - LZ78\n3 - LZW\nSelected: "))
   if choice == 1:
     encode_LZ77('in.txt', 'encoded.txt')
     decode_LZ77('encoded.txt', 'decoded.txt')
