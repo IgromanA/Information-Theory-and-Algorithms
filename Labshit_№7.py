@@ -262,7 +262,7 @@ def main():
     encode_LZW('in.txt', 'encoded.txt')
     decode_LZW('encoded.txt', 'decoded.txt')
   else:
-    print('You entered invalid input')
+    print('You entered invalid input lol')
     
 
 if __name__ == "__main__":
